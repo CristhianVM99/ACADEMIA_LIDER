@@ -9,6 +9,7 @@ using System.Windows.Forms;
 
 using AcademiaLider.Core;
 using AcademiaLider.Entidades;
+using System.IO;
 
 namespace AcademiaLider.CapaAccesoDatos
 {
@@ -22,8 +23,18 @@ namespace AcademiaLider.CapaAccesoDatos
         public bool Crear(Participante objParticipante)
         {
             bool respuesta = false;
-            String sql = "INSERT INTO participantes (codigo, nombres, ap_paterno, ap_materno, ci, cod_grado, cod_ciudad, correo, telefono, fecha_nac, cod_profesion) "+
-                "VALUES (CONCAT('LP-', RIGHT('00000' + Ltrim(Rtrim(NEXT VALUE FOR seq_participante)),5)), @nombres, @ap_paterno, @ap_materno, @ci, @cod_grado, @cod_ciudad, @correo, @telefono, @fecha_nac, @cod_profesion)";
+            String sql;
+            String sqlFoto = "";
+            String sqlFotoValor = "";
+
+            if (objParticipante.Foto != null)
+            {
+                sqlFoto = ", foto";
+                sqlFotoValor = ", @foto";
+            }
+            sql = "INSERT INTO participantes (codigo, nombres, ap_paterno, ap_materno, ci, cod_grado, cod_ciudad, correo, telefono, fecha_nac, cod_profesion"+sqlFoto+") " +
+                "VALUES (CONCAT('LP-', RIGHT('00000' + Ltrim(Rtrim(NEXT VALUE FOR seq_participante)),5)), @nombres, @ap_paterno, @ap_materno, @ci, @cod_grado, @cod_ciudad, @correo, @telefono, @fecha_nac, @cod_profesion"+sqlFotoValor+")";
+
             int filas;
             try
             {
@@ -39,6 +50,9 @@ namespace AcademiaLider.CapaAccesoDatos
                 comando.Parameters.AddWithValue("@telefono", objParticipante.Telefono);
                 comando.Parameters.AddWithValue("@fecha_nac", objParticipante.FechaNac);
                 comando.Parameters.AddWithValue("@cod_profesion", objParticipante.CodProfesion);
+                if (objParticipante.Foto != null) {
+                    comando.Parameters.AddWithValue("@foto", objParticipante.Foto);
+                }
                 filas = comando.ExecuteNonQuery();
                 bd.Cerrar();
                 if (filas > 0)
@@ -56,7 +70,16 @@ namespace AcademiaLider.CapaAccesoDatos
         public bool Modificar(Participante objParticipante)
         {
             bool respuesta = false;
-            String sql = "UPDATE participantes SET nombres=@nombres, ap_paterno=@ap_paterno, ap_materno=@ap_materno, ci=@ci, cod_grado=@cod_grado, cod_ciudad=@cod_ciudad, correo=@correo, telefono=@telefono, fecha_nac=@fecha_nac, cod_profesion=@cod_profesion WHERE codigo=@codigo";
+            String sql;
+            String sqlFoto = "";
+
+            if (objParticipante.Foto != null)
+            {
+                sqlFoto = ", foto=@foto";
+            }
+
+            sql = "UPDATE participantes SET nombres=@nombres, ap_paterno=@ap_paterno, ap_materno=@ap_materno, ci=@ci, cod_grado=@cod_grado, cod_ciudad=@cod_ciudad, correo=@correo, telefono=@telefono, fecha_nac=@fecha_nac, cod_profesion=@cod_profesion"+sqlFoto+" WHERE codigo=@codigo";
+
             int filas;
             try
             {
@@ -72,6 +95,10 @@ namespace AcademiaLider.CapaAccesoDatos
                 comando.Parameters.AddWithValue("@telefono", objParticipante.Telefono);
                 comando.Parameters.AddWithValue("@fecha_nac", objParticipante.FechaNac);
                 comando.Parameters.AddWithValue("@cod_profesion", objParticipante.CodProfesion);
+                if (objParticipante.Foto != null)
+                {
+                    comando.Parameters.AddWithValue("@foto", objParticipante.Foto);
+                }
                 comando.Parameters.AddWithValue("@codigo", objParticipante.Codigo);
                 filas = comando.ExecuteNonQuery();
                 bd.Cerrar();
@@ -134,6 +161,7 @@ namespace AcademiaLider.CapaAccesoDatos
                     objParticipante.Telefono = Convert.ToInt32(datos["telefono"].ToString());
                     objParticipante.FechaNac = datos["fecha_nac"].ToString();
                     objParticipante.CodProfesion = Convert.ToInt32(datos["cod_profesion"].ToString());
+                    objParticipante.Foto = datos["foto"] != DBNull.Value ? (Byte[]) datos["foto"] : null;
                 }
                 bd.Cerrar();
             }

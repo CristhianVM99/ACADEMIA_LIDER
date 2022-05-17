@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +20,7 @@ namespace AcademiaLider.Entidades
         private int telefono;
         private String fecha_nac;
         private int cod_profesion;
+        private Byte[] foto;
 
         public Participante()
         {
@@ -33,6 +35,7 @@ namespace AcademiaLider.Entidades
             telefono = 0;
             fecha_nac = "";
             cod_profesion = 0;
+            foto = null;
         }
 
         public String Codigo
@@ -99,6 +102,12 @@ namespace AcademiaLider.Entidades
         {
             get { return cod_profesion; }
             set { cod_profesion = value; }
+        }
+
+        public Byte[] Foto
+        {
+            get { return foto; }
+            set { foto = value; }
         }
     }
 }

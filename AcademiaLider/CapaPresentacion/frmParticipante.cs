@@ -10,6 +10,8 @@ using System.Windows.Forms;
 
 using AcademiaLider.CapaLogicaNegocio;
 using AcademiaLider.Entidades;
+using System.IO;
+using System.Drawing.Imaging;
 
 namespace AcademiaLider.CapaPresentacion
 {
@@ -25,13 +27,14 @@ namespace AcademiaLider.CapaPresentacion
 
         private void frmParticipante_Load(object sender, EventArgs e)
         {
-            Limpiar();
+            this.WindowState = FormWindowState.Maximized;
             DeshabilitarBtnModificar();
             DeshabilitarBtnEliminar();
             CargarGradosAcademicos();
             CargarProfesioness();
             CargarCiudades();
             Listar();
+            Limpiar();
         }
 
         private void Limpiar()
@@ -41,16 +44,40 @@ namespace AcademiaLider.CapaPresentacion
             txtApMaterno.Text = "";
             txtCi.Text = "";
             dtpFechaNac.Text = "";
-            cboCiudad.Text = "";
-            cboProfesion.Text = "";
-            cboGradoAcademico.Text = "";
+            if (cboCiudad.Items.Count > 0)
+            {
+                cboCiudad.SelectedIndex = 0;
+            }else
+            {
+                cboCiudad.Text = "";
+            }
+
+            if (cboProfesion.Items.Count > 0)
+            {
+                cboProfesion.SelectedIndex = 0;
+            }
+            else
+            {
+                cboProfesion.Text = "";
+            }
+
+            if (cboGradoAcademico.Items.Count > 0)
+            {
+                cboGradoAcademico.SelectedIndex = 0;
+            }
+            else
+            {
+                cboGradoAcademico.Text = "";
+            }
             txtCorreo.Text = "";
-            txtTelefono.Text = "";
+            txtTelefono.Text = "0";
+            LimpiarFoto();
         }
 
         private void Inicializar()
         {
             objParticipante = new Participante();
+
         }
 
         private void HabilitarBtnNuevo()
@@ -121,6 +148,15 @@ namespace AcademiaLider.CapaPresentacion
             objParticipante.CodCiudad = Convert.ToInt32(cboCiudad.SelectedValue);
             objParticipante.Correo = txtCorreo.Text;
             objParticipante.Telefono = txtTelefono.Text.Equals("") ? 0 : Convert.ToInt32(txtTelefono.Text);
+            if (pbFoto.Image != null)
+            {
+                MemoryStream  ms = new MemoryStream();
+                pbFoto.Image.Save(ms, ImageFormat.Jpeg);
+                byte[] cadenaFoto = new byte[ms.Length];
+                ms.Position = 0;
+                ms.Read(cadenaFoto, 0, cadenaFoto.Length);
+                objParticipante.Foto = cadenaFoto;
+            }
         }
 
         private void MostrarDatos()
@@ -135,6 +171,15 @@ namespace AcademiaLider.CapaPresentacion
             cboGradoAcademico.SelectedValue = objParticipante.CodGrado;
             txtCorreo.Text = objParticipante.Correo;
             txtTelefono.Text = objParticipante.Telefono.ToString();
+            if (objParticipante.Foto != null)
+            {
+                MemoryStream ms = new MemoryStream(objParticipante.Foto);
+                MostrarFoto(new Bitmap(Image.FromStream(ms)));
+            }
+            else
+            {
+                LimpiarFoto();
+            }
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -147,7 +192,8 @@ namespace AcademiaLider.CapaPresentacion
             {
                 Limpiar();
                 Listar();
-                MessageBox.Show(objLogicaNegocio.Mensaje);
+                //MessageBox.Show(objLogicaNegocio.Mensaje);
+                lblMensaje.Text = objLogicaNegocio.Mensaje;
             }
             else
             {
@@ -167,7 +213,8 @@ namespace AcademiaLider.CapaPresentacion
                 Limpiar();
                 HabilitarBtnNuevo();
                 Listar();
-                MessageBox.Show(objLogicaNegocio.Mensaje);
+                //MessageBox.Show(objLogicaNegocio.Mensaje);
+                lblMensaje.Text = objLogicaNegocio.Mensaje;
             }
             else
             {
@@ -187,7 +234,8 @@ namespace AcademiaLider.CapaPresentacion
                 Limpiar();
                 HabilitarBtnNuevo();
                 Listar();
-                MessageBox.Show(objLogicaNegocio.Mensaje);
+                lblMensaje.Text = objLogicaNegocio.Mensaje;
+                //MessageBox.Show(objLogicaNegocio.Mensaje);
             }
             else
             {
@@ -223,6 +271,52 @@ namespace AcademiaLider.CapaPresentacion
         {
             String criterio = txtCriterioBusqueda.Text;
             dgvListado.DataSource = objLogicaNegocio.BuscarRegistros(criterio);
+        }
+
+        private void txtCriterioBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            String criterio = txtCriterioBusqueda.Text;
+            dgvListado.DataSource = objLogicaNegocio.BuscarRegistros(criterio);
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbFoto_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pbFoto_DoubleClick(object sender, EventArgs e)
+        {
+            OpenFileDialog archivo = new OpenFileDialog();
+            archivo.Filter = "Image Files(*.jpg; *.jpeg; *.png)|*.jpg; *.jpeg; *.png";
+            if (archivo.ShowDialog() == DialogResult.OK)
+            {
+                Bitmap imagen = RedimensionarImagen(new Bitmap(archivo.FileName), new Size(pbFoto.Width, pbFoto.Height));
+                MostrarFoto(imagen);
+            }
+        }
+
+        private Bitmap RedimensionarImagen(Bitmap imagen, Size marco)
+        {
+            Double ratioAlto = (Double)marco.Height / (Double)imagen.Height;
+            int alto = (int)(imagen.Height * ratioAlto);
+            int ancho = (int)(imagen.Width * ratioAlto);
+            return new Bitmap(imagen, new Size(ancho, alto));
+        }
+
+        private void MostrarFoto(Bitmap imagen)
+        {
+            pbFoto.Image = imagen;
+            pbFoto.SizeMode = PictureBoxSizeMode.CenterImage;
+        }
+
+        private void LimpiarFoto()
+        {
+            pbFoto.Image = null;
         }
     }
 }

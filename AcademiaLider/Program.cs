@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using AcademiaLider.CapaPresentacion;
+
 namespace AcademiaLider
 {
     static class Program
@@ -16,7 +18,8 @@ namespace AcademiaLider
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AcademiaLider.CapaPresentacion.frmParticipante());
+            //Application.Run(new frmPrincipal());
+            Application.Run(new frmMain());
         }
     }
 }

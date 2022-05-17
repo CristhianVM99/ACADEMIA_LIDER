@@ -47,20 +47,59 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CapaAccesoDatos\CadInscripcion.cs" />
     <Compile Include="CapaAccesoDatos\CadParticipante.cs" />
+    <Compile Include="CapaLogicaNegocio\ClnInscripcion.cs" />
     <Compile Include="CapaLogicaNegocio\ClnParticipante.cs" />
+    <Compile Include="CapaPresentacion\frmInscripcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmInscripcion.Designer.cs">
+      <DependentUpon>frmInscripcion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmListaParticipantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmListaParticipantes.Designer.cs">
+      <DependentUpon>frmListaParticipantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="CapaPresentacion\frmParticipante.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CapaPresentacion\frmParticipante.Designer.cs">
       <DependentUpon>frmParticipante.cs</DependentUpon>
     </Compile>
+    <Compile Include="CapaPresentacion\frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Core\ConexionBaseDatos.cs" />
+    <Compile Include="Entidades\Inscripcion.cs" />
     <Compile Include="Entidades\Participante.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CapaPresentacion\frmInscripcion.resx">
+      <DependentUpon>frmInscripcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\frmListaParticipantes.resx">
+      <DependentUpon>frmListaParticipantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CapaPresentacion\frmParticipante.resx">
       <DependentUpon>frmParticipante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
