@@ -25,6 +25,7 @@ namespace AcademiaLider.CapaPresentacion
 
         private void frmDocentes_Load(object sender, EventArgs e)
         {
+            this.WindowState = FormWindowState.Maximized;
             Limpiar();
             DeshabilitarBtnModificar();
             DeshabilitarBtnEliminar();
@@ -41,9 +42,31 @@ namespace AcademiaLider.CapaPresentacion
             txtApMaterno.Text = "";
             txtCi.Text = "";
             txtCuenta.Text = "";
-            cboCiudad.Text = "";
-            cboProfesion.Text = "";
-            cboGradoAcademico.Text = "";
+            if (cboCiudad.Items.Count > 0)
+            {
+                cboCiudad.SelectedIndex = 0;
+            }
+            else
+            {
+                cboCiudad.Text = "";
+            }
+            if (cboProfesion.Items.Count > 0)
+            {
+                cboProfesion.SelectedIndex = 0;
+            }
+            else
+            {
+                cboProfesion.Text = "";
+            }
+
+            if (cboGradoAcademico.Items.Count > 0)
+            {
+                cboGradoAcademico.SelectedIndex = 0;
+            }
+            else
+            {
+                cboGradoAcademico.Text = "";
+            }
             txtCorreo.Text = "";
             txtTelefono.Text = "";
         }
@@ -147,7 +170,8 @@ namespace AcademiaLider.CapaPresentacion
             {
                 Limpiar();
                 Listar();
-                MessageBox.Show(objLogicaNegocio.Mensaje);
+                //MessageBox.Show(objLogicaNegocio.Mensaje);
+                lblMensaje.Text = objLogicaNegocio.Mensaje;
             }
             else
             {
@@ -167,7 +191,8 @@ namespace AcademiaLider.CapaPresentacion
                 Limpiar();
                 HabilitarBtnNuevo();
                 Listar();
-                MessageBox.Show(objLogicaNegocio.Mensaje);
+                //MessageBox.Show(objLogicaNegocio.Mensaje);
+                lblMensaje.Text = objLogicaNegocio.Mensaje;
             }
             else
             {
@@ -187,7 +212,8 @@ namespace AcademiaLider.CapaPresentacion
                 Limpiar();
                 HabilitarBtnNuevo();
                 Listar();
-                MessageBox.Show(objLogicaNegocio.Mensaje);
+                //MessageBox.Show(objLogicaNegocio.Mensaje);
+                lblMensaje.Text = objLogicaNegocio.Mensaje;
             }
             else
             {
@@ -229,6 +255,11 @@ namespace AcademiaLider.CapaPresentacion
         {
             String criterio = txtCriterioBusqueda.Text;
             dgvListado.DataSource = objLogicaNegocio.BuscarRegistros(criterio);
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

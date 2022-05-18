@@ -20,3 +20,18 @@ F:\UPEA\07 SEPTIMO SEMESTRE\INGENIERIA DE SOFTWARE\PROYECTO\DESARROLLO\ACADEMIA_
 F:\UPEA\07 SEPTIMO SEMESTRE\INGENIERIA DE SOFTWARE\PROYECTO\DESARROLLO\ACADEMIA_LIDER\AcademiaLider\obj\Debug\AcademiaLider.CapaPresentacion.frmMain.resources
 F:\UPEA\07 SEPTIMO SEMESTRE\INGENIERIA DE SOFTWARE\PROYECTO\DESARROLLO\ACADEMIA_LIDER\AcademiaLider\obj\Debug\AcademiaLider.CapaPresentacion.frmInscripcion.resources
 F:\UPEA\07 SEPTIMO SEMESTRE\INGENIERIA DE SOFTWARE\PROYECTO\DESARROLLO\ACADEMIA_LIDER\AcademiaLider\obj\Debug\AcademiaLider.CapaPresentacion.frmListaParticipantes.resources
+C:\Users\Cristian UPEA\Documents\INGENIERIA DE SOFTWARE 7C\PROYECTO ACADEMIA LIDER\ACADEMIA_LIDER\AcademiaLider\bin\Debug\AcademiaLider.exe.config
+C:\Users\Cristian UPEA\Documents\INGENIERIA DE SOFTWARE 7C\PROYECTO ACADEMIA LIDER\ACADEMIA_LIDER\AcademiaLider\obj\Debug\AcademiaLider.exe
+C:\Users\Cristian UPEA\Documents\INGENIERIA DE SOFTWARE 7C\PROYECTO ACADEMIA LIDER\ACADEMIA_LIDER\AcademiaLider\obj\Debug\AcademiaLider.pdb
+C:\Users\Cristian UPEA\Documents\INGENIERIA DE SOFTWARE 7C\PROYECTO ACADEMIA LIDER\ACADEMIA_LIDER\AcademiaLider\bin\Debug\AcademiaLider.exe
+C:\Users\Cristian UPEA\Documents\INGENIERIA DE SOFTWARE 7C\PROYECTO ACADEMIA LIDER\ACADEMIA_LIDER\AcademiaLider\bin\Debug\AcademiaLider.pdb
+C:\Users\Cristian UPEA\Documents\INGENIERIA DE SOFTWARE 7C\PROYECTO ACADEMIA LIDER\ACADEMIA_LIDER\AcademiaLider\obj\Debug\AcademiaLider.csprojResolveAssemblyReference.cache
+C:\Users\Cristian UPEA\Documents\INGENIERIA DE SOFTWARE 7C\PROYECTO ACADEMIA LIDER\ACADEMIA_LIDER\AcademiaLider\obj\Debug\AcademiaLider.CapaPresentacion.frmInscripcion.resources
+C:\Users\Cristian UPEA\Documents\INGENIERIA DE SOFTWARE 7C\PROYECTO ACADEMIA LIDER\ACADEMIA_LIDER\AcademiaLider\obj\Debug\AcademiaLider.CapaPresentacion.frmListaParticipantes.resources
+C:\Users\Cristian UPEA\Documents\INGENIERIA DE SOFTWARE 7C\PROYECTO ACADEMIA LIDER\ACADEMIA_LIDER\AcademiaLider\obj\Debug\AcademiaLider.CapaPresentacion.frmMain.resources
+C:\Users\Cristian UPEA\Documents\INGENIERIA DE SOFTWARE 7C\PROYECTO ACADEMIA LIDER\ACADEMIA_LIDER\AcademiaLider\obj\Debug\AcademiaLider.CapaPresentacion.frmParticipante.resources
+C:\Users\Cristian UPEA\Documents\INGENIERIA DE SOFTWARE 7C\PROYECTO ACADEMIA LIDER\ACADEMIA_LIDER\AcademiaLider\obj\Debug\AcademiaLider.CapaPresentacion.frmPrincipal.resources
+C:\Users\Cristian UPEA\Documents\INGENIERIA DE SOFTWARE 7C\PROYECTO ACADEMIA LIDER\ACADEMIA_LIDER\AcademiaLider\obj\Debug\AcademiaLider.Properties.Resources.resources
+C:\Users\Cristian UPEA\Documents\INGENIERIA DE SOFTWARE 7C\PROYECTO ACADEMIA LIDER\ACADEMIA_LIDER\AcademiaLider\obj\Debug\AcademiaLider.csproj.GenerateResource.Cache
+C:\Users\Cristian UPEA\Documents\INGENIERIA DE SOFTWARE 7C\PROYECTO ACADEMIA LIDER\ACADEMIA_LIDER\AcademiaLider\obj\Debug\AcademiaLider.CapaPresentacion.frmDocente.resources
+C:\Users\Cristian UPEA\Documents\INGENIERIA DE SOFTWARE 7C\PROYECTO ACADEMIA LIDER\ACADEMIA_LIDER\AcademiaLider\obj\Debug\AcademiaLider.CapaPresentacion.Evento.resources

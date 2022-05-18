@@ -36,10 +36,10 @@
             this.eventosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.inscripcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registroToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.certificadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.catalogosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registroToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -102,6 +102,7 @@
             this.registroToolStripMenuItem2.Name = "registroToolStripMenuItem2";
             this.registroToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
             this.registroToolStripMenuItem2.Text = "Registro";
+            this.registroToolStripMenuItem2.Click += new System.EventHandler(this.registroToolStripMenuItem2_Click);
             // 
             // inscripcionesToolStripMenuItem
             // 
@@ -110,6 +111,13 @@
             this.inscripcionesToolStripMenuItem.Name = "inscripcionesToolStripMenuItem";
             this.inscripcionesToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
             this.inscripcionesToolStripMenuItem.Text = "Inscripciones";
+            // 
+            // registroToolStripMenuItem3
+            // 
+            this.registroToolStripMenuItem3.Name = "registroToolStripMenuItem3";
+            this.registroToolStripMenuItem3.Size = new System.Drawing.Size(117, 22);
+            this.registroToolStripMenuItem3.Text = "Registro";
+            this.registroToolStripMenuItem3.Click += new System.EventHandler(this.registroToolStripMenuItem3_Click);
             // 
             // certificadosToolStripMenuItem
             // 
@@ -129,13 +137,6 @@
             this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             // 
-            // registroToolStripMenuItem3
-            // 
-            this.registroToolStripMenuItem3.Name = "registroToolStripMenuItem3";
-            this.registroToolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
-            this.registroToolStripMenuItem3.Text = "Registro";
-            this.registroToolStripMenuItem3.Click += new System.EventHandler(this.registroToolStripMenuItem3_Click);
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -146,7 +147,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmMain";
+            this.Text = "Menu Principal";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

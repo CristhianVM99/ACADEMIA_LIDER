@@ -13,12 +13,12 @@ using AcademiaLider.Entidades;
 
 namespace AcademiaLider.CapaPresentacion
 {
-    public partial class frmEvento : Form
+    public partial class Evento : Form
     {
         private ClnEvento objLogicaNegocio = new ClnEvento();
-        private Evento objEvento = new Evento();
+        private Entidades.Evento objEvento = new Entidades.Evento();
 
-        public frmEvento()
+        public Evento()
         {
             InitializeComponent();
         }
@@ -33,7 +33,8 @@ namespace AcademiaLider.CapaPresentacion
             {
                 Limpiar();
                 Listar();
-                MessageBox.Show(objLogicaNegocio.Mensaje);
+                //MessageBox.Show(objLogicaNegocio.Mensaje);
+                lblMensaje.Text = objLogicaNegocio.Mensaje;
             }
             else
             {
@@ -53,7 +54,8 @@ namespace AcademiaLider.CapaPresentacion
                 Limpiar();
                 HabilitarBtnNuevo();
                 Listar();
-                MessageBox.Show(objLogicaNegocio.Mensaje);
+                //MessageBox.Show(objLogicaNegocio.Mensaje);
+                lblMensaje.Text = objLogicaNegocio.Mensaje;
             }
             else
             {
@@ -78,7 +80,8 @@ namespace AcademiaLider.CapaPresentacion
                 Limpiar();
                 HabilitarBtnNuevo();
                 Listar();
-                MessageBox.Show(objLogicaNegocio.Mensaje);
+                //MessageBox.Show(objLogicaNegocio.Mensaje);
+                lblMensaje.Text = objLogicaNegocio.Mensaje;
             }
             else
             {
@@ -116,6 +119,7 @@ namespace AcademiaLider.CapaPresentacion
 
         private void frmEvento_Load(object sender, EventArgs e)
         {
+            this.WindowState = FormWindowState.Maximized;
             Limpiar();
             DeshabilitarBtnModificar();
             DeshabilitarBtnEliminar();
@@ -132,14 +136,38 @@ namespace AcademiaLider.CapaPresentacion
             txtCargaHoraria.Text = "";
             dtpFechaInicio.Text = "";
             dtpFechaFinal.Text = "";
-            cboCiudad.Text = "";
-            cboEstado.Text = "";
-            cboDocente.Text = "";
+            if (cboCiudad.Items.Count > 0)
+            {
+                cboCiudad.SelectedIndex = 0;
+            }
+            else
+            {
+                cboCiudad.Text = "";
+            }
+
+            if (cboEstado.Items.Count > 0)
+            {
+                cboEstado.SelectedIndex = 0;
+            }
+            else
+            {
+                cboEstado.Text = "";
+            }
+
+            if (cboDocente.Items.Count > 0)
+            {
+                cboDocente.SelectedIndex = 0;
+            }
+            else
+            {
+                cboDocente.Text = "";
+            }
+            
         }
 
         private void Inicializar()
         {
-            objEvento = new Evento();
+            objEvento = new Entidades.Evento();
         }
 
         private void HabilitarBtnNuevo()
@@ -231,6 +259,11 @@ namespace AcademiaLider.CapaPresentacion
         }
 
         private void dgvListado_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
         {
 
         }

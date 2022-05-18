@@ -35,13 +35,13 @@ namespace AcademiaLider.CapaPresentacion
 
         private void registroToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            /*if (!this.MdiChildren.Contains(formDocente))
+            if (!this.MdiChildren.Contains(viewDocente))
             {
-                formDocente = new frmDocente();
-                formDocente.MdiParent = this;
+                viewDocente = new frmDocente();
+                viewDocente.MdiParent = this;
             }
-            formDocente.Show();
-            formDocente.BringToFront();*/
+            viewDocente.Show();
+            viewDocente.BringToFront();
         }
 
         private void registroToolStripMenuItem3_Click(object sender, EventArgs e)
@@ -53,6 +53,17 @@ namespace AcademiaLider.CapaPresentacion
             }
             viewInscripcion.Show();
             viewInscripcion.BringToFront();
+        }
+
+        private void registroToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            if (!this.MdiChildren.Contains(viewInscripcion))
+            {
+                viewEvento = new Evento();
+                viewEvento.MdiParent = this;
+            }
+            viewEvento.Show();
+            viewEvento.BringToFront();
         }
     }
 }

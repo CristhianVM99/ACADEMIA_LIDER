@@ -318,5 +318,10 @@ namespace AcademiaLider.CapaPresentacion
         {
             pbFoto.Image = null;
         }
+
+        private void cboCiudad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
