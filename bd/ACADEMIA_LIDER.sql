@@ -79,8 +79,11 @@ CREATE TABLE usuarios(
 codigo int primary key identity,
 nombre_completo varchar(200),
 usuario varchar(80) unique,
-contrasena varchar(200));
+contrasena varchar(200)
+correo varchar(200));
 
 CREATE SEQUENCE seq_participante as int start with 1 increment by 1 minvalue 1;
 CREATE SEQUENCE seq_evento as int start with 1 increment by 1 minvalue 1;
 CREATE SEQUENCE seq_docente as int start with 1 increment by 1 minvalue 1;
+
+ insert into usuarios (nombre_completo,usuario,contrasena,correo)  values ('juan mamani mamni','admin',ENCRYPTBYPASSPHRASE('password','123'),'juan@gmail.com');

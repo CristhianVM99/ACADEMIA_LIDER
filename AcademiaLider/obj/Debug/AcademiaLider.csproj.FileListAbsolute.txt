@@ -16,3 +16,23 @@ F:\UPEA\07 SEPTIMO SEMESTRE\INGENIERIA DE SOFTWARE\PROYECTO\DESARROLLO\ACADEMIA_
 F:\UPEA\07 SEPTIMO SEMESTRE\INGENIERIA DE SOFTWARE\PROYECTO\DESARROLLO\ACADEMIA_LIDER\AcademiaLider\obj\Debug\AcademiaLider.csproj.GenerateResource.Cache
 F:\UPEA\07 SEPTIMO SEMESTRE\INGENIERIA DE SOFTWARE\PROYECTO\DESARROLLO\ACADEMIA_LIDER\AcademiaLider\obj\Debug\AcademiaLider.exe
 F:\UPEA\07 SEPTIMO SEMESTRE\INGENIERIA DE SOFTWARE\PROYECTO\DESARROLLO\ACADEMIA_LIDER\AcademiaLider\obj\Debug\AcademiaLider.pdb
+E:\Escritorio\Ingenieria de Software\proyecto 1\ACADEMIA_LIDER\ACADEMIA_LIDER\AcademiaLider\bin\Debug\AcademiaLider.exe.config
+E:\Escritorio\Ingenieria de Software\proyecto 1\ACADEMIA_LIDER\ACADEMIA_LIDER\AcademiaLider\bin\Debug\AcademiaLider.exe
+E:\Escritorio\Ingenieria de Software\proyecto 1\ACADEMIA_LIDER\ACADEMIA_LIDER\AcademiaLider\bin\Debug\AcademiaLider.pdb
+E:\Escritorio\Ingenieria de Software\proyecto 1\ACADEMIA_LIDER\ACADEMIA_LIDER\AcademiaLider\obj\Debug\AcademiaLider.csproj.AssemblyReference.cache
+E:\Escritorio\Ingenieria de Software\proyecto 1\ACADEMIA_LIDER\ACADEMIA_LIDER\AcademiaLider\obj\Debug\AcademiaLider.CapaPresentacion.frmParticipante.resources
+E:\Escritorio\Ingenieria de Software\proyecto 1\ACADEMIA_LIDER\ACADEMIA_LIDER\AcademiaLider\obj\Debug\AcademiaLider.Properties.Resources.resources
+E:\Escritorio\Ingenieria de Software\proyecto 1\ACADEMIA_LIDER\ACADEMIA_LIDER\AcademiaLider\obj\Debug\AcademiaLider.csproj.GenerateResource.cache
+E:\Escritorio\Ingenieria de Software\proyecto 1\ACADEMIA_LIDER\ACADEMIA_LIDER\AcademiaLider\obj\Debug\AcademiaLider.csproj.CoreCompileInputs.cache
+E:\Escritorio\Ingenieria de Software\proyecto 1\ACADEMIA_LIDER\ACADEMIA_LIDER\AcademiaLider\obj\Debug\AcademiaLider.exe
+E:\Escritorio\Ingenieria de Software\proyecto 1\ACADEMIA_LIDER\ACADEMIA_LIDER\AcademiaLider\obj\Debug\AcademiaLider.pdb
+E:\Escritorio\Ingenieria de Software\proyecto 1\ACADEMIA_LIDER\ACADEMIA_LIDER\AcademiaLider\obj\Debug\AcademiaLider.CapaPresentacion.Login.resources
+E:\Escritorio\Ingenieria de Software\proyecto 1\ACADEMIA_LIDER\ACADEMIA_LIDER\AcademiaLider\obj\Debug\AcademiaLider.CapaPresentacion.frmCatalogos.resources
+E:\Escritorio\Ingenieria de Software\proyecto 1\ACADEMIA_LIDER\ACADEMIA_LIDER\AcademiaLider\bin\Debug\MySql.Data.dll
+E:\Escritorio\Ingenieria de Software\proyecto 1\ACADEMIA_LIDER\ACADEMIA_LIDER\AcademiaLider\bin\Debug\zxing.dll
+E:\Escritorio\Ingenieria de Software\proyecto 1\ACADEMIA_LIDER\ACADEMIA_LIDER\AcademiaLider\obj\Debug\AcademiaLider.csproj.CopyComplete
+E:\Escritorio\Ingenieria de Software\proyecto 1\ACADEMIA_LIDER\ACADEMIA_LIDER\AcademiaLider\obj\Debug\AcademiaLider.CapaPresentacion.frmCiudades.resources
+E:\Escritorio\Ingenieria de Software\proyecto 1\ACADEMIA_LIDER\ACADEMIA_LIDER\AcademiaLider\obj\Debug\AcademiaLider.CapaPresentacion.frmEventos.resources
+E:\Escritorio\Ingenieria de Software\proyecto 1\ACADEMIA_LIDER\ACADEMIA_LIDER\AcademiaLider\obj\Debug\AcademiaLider.CapaPresentacion.frmGradosAcademicos.resources
+E:\Escritorio\Ingenieria de Software\proyecto 1\ACADEMIA_LIDER\ACADEMIA_LIDER\AcademiaLider\obj\Debug\AcademiaLider.CapaPresentacion.frmProfesiones.resources
+E:\Escritorio\Ingenieria de Software\proyecto 1\ACADEMIA_LIDER\ACADEMIA_LIDER\AcademiaLider\obj\Debug\AcademiaLider.CapaPresentacion.frmUsuarios.resources

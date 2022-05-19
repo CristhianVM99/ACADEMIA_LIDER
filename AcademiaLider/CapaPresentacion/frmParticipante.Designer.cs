@@ -50,7 +50,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.ofdFoto = new System.Windows.Forms.OpenFileDialog();
-            this.pbFoto = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -60,9 +59,10 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.pbFoto = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // cboGradoAcademico
@@ -244,15 +244,6 @@
             // 
             this.ofdFoto.FileName = "openFileDialog1";
             // 
-            // pbFoto
-            // 
-            this.pbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbFoto.Location = new System.Drawing.Point(712, 43);
-            this.pbFoto.Name = "pbFoto";
-            this.pbFoto.Size = new System.Drawing.Size(138, 124);
-            this.pbFoto.TabIndex = 21;
-            this.pbFoto.TabStop = false;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -343,11 +334,20 @@
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
+            // pbFoto
+            // 
+            this.pbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbFoto.Location = new System.Drawing.Point(712, 43);
+            this.pbFoto.Name = "pbFoto";
+            this.pbFoto.Size = new System.Drawing.Size(138, 124);
+            this.pbFoto.TabIndex = 21;
+            this.pbFoto.TabStop = false;
+            // 
             // frmParticipante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(862, 519);
+            this.ClientSize = new System.Drawing.Size(891, 527);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.label11);
@@ -374,12 +374,13 @@
             this.Controls.Add(this.dgvListado);
             this.Controls.Add(this.cboGradoAcademico);
             this.Name = "frmParticipante";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Participante";
             this.Load += new System.EventHandler(this.frmParticipante_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

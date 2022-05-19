@@ -12,7 +12,7 @@ using AcademiaLider.Entidades;
 
 namespace AcademiaLider.CapaAccesoDatos
 {
-    public class CadParticipante
+    public class CadParticipante 
     {
         public CadParticipante()
         {
@@ -61,7 +61,7 @@ namespace AcademiaLider.CapaAccesoDatos
             try
             {
                 ConexionBaseDatos bd = new ConexionBaseDatos();
-                SqlCommand comando = new SqlCommand(sql, bd.Conectar());
+               SqlCommand comando = new SqlCommand(sql, bd.Conectar());
                 comando.Parameters.AddWithValue("@nombres", objParticipante.Nombres);
                 comando.Parameters.AddWithValue("@ap_paterno", objParticipante.ApPaterno);
                 comando.Parameters.AddWithValue("@ap_materno", objParticipante.ApMaterno);
@@ -252,7 +252,7 @@ namespace AcademiaLider.CapaAccesoDatos
             {
                 ConexionBaseDatos bd = new ConexionBaseDatos();
                 SqlCommand comando = new SqlCommand(sql, bd.Conectar());
-                SqlDataReader datos = comando.ExecuteReader();
+               SqlDataReader datos = comando.ExecuteReader();
                 tabla.Load(datos);
                 datos.Close();
                 bd.Cerrar();

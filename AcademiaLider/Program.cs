@@ -16,7 +16,7 @@ namespace AcademiaLider
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AcademiaLider.CapaPresentacion.frmParticipante());
+            Application.Run(new AcademiaLider.CapaPresentacion.Login());
         }
     }
 }

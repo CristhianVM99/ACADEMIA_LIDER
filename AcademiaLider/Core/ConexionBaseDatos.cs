@@ -3,20 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SqlClient;
+
 using System.Configuration;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace AcademiaLider.Core
 {
     class ConexionBaseDatos
     {
         private String cadenaConexion;
+       // private SqlConnection conexion;
         private SqlConnection conexion;
 
         public ConexionBaseDatos()
         {
-            cadenaConexion = "";
+           
+          
+           cadenaConexion = "server=CAR\\SERVER;database=academia_lider;integrated security=true";
             conexion = null;
         }
 
@@ -39,7 +43,8 @@ namespace AcademiaLider.Core
             {
                 if (conexion == null)
                 {
-                    conexion = new SqlConnection(ObtenerCadenaConexion());
+                 //   conexion = new SqlConnection(cadenaConexion);
+                conexion=new SqlConnection(cadenaConexion);
                     conexion.Open();
                 }
             }
