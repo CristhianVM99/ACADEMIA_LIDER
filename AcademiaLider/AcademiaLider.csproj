@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="CapaAccesoDatos\Accesslogin.cs" />
     <Compile Include="CapaAccesoDatos\cadCiudades.cs" />
     <Compile Include="CapaAccesoDatos\cadGrados.cs" />
@@ -90,6 +91,45 @@
     </Compile>
     <Compile Include="CapaPresentacion\frmGradosAcademicos.Designer.cs">
       <DependentUpon>frmGradosAcademicos.cs</DependentUpon>
+=======
+    <Compile Include="CapaAccesoDatos\CadDocente.cs" />
+    <Compile Include="CapaAccesoDatos\CadEvento.cs" />
+    <Compile Include="CapaAccesoDatos\CadInscripcion.cs" />
+    <Compile Include="CapaAccesoDatos\CadParticipante.cs" />
+    <Compile Include="CapaLogicaNegocio\ClnDocente.cs" />
+    <Compile Include="CapaLogicaNegocio\ClnEvento.cs" />
+    <Compile Include="CapaLogicaNegocio\ClnInscripcion.cs" />
+    <Compile Include="CapaLogicaNegocio\ClnParticipante.cs" />
+    <Compile Include="CapaPresentacion\frmDocente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmDocente.Designer.cs">
+      <DependentUpon>frmDocente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmEvento.Designer.cs">
+      <DependentUpon>frmEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmInscripcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmInscripcion.Designer.cs">
+      <DependentUpon>frmInscripcion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmListaParticipantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmListaParticipantes.Designer.cs">
+      <DependentUpon>frmListaParticipantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+>>>>>>> 1c991e5d116dbbb484a490b214152649d586ec41
     </Compile>
     <Compile Include="CapaPresentacion\frmParticipante.cs">
       <SubType>Form</SubType>
@@ -97,6 +137,7 @@
     <Compile Include="CapaPresentacion\frmParticipante.Designer.cs">
       <DependentUpon>frmParticipante.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="CapaPresentacion\frmProfesiones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,11 +160,24 @@
     <Compile Include="Entidades\Ciudades.cs" />
     <Compile Include="Entidades\Grados.cs" />
     <Compile Include="Entidades\Modalidades.cs" />
+=======
+    <Compile Include="CapaPresentacion\frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\ConexionBaseDatos.cs" />
+    <Compile Include="Entidades\Docente.cs" />
+    <Compile Include="Entidades\Evento.cs" />
+    <Compile Include="Entidades\Inscripcion.cs" />
+>>>>>>> 1c991e5d116dbbb484a490b214152649d586ec41
     <Compile Include="Entidades\Participante.cs" />
     <Compile Include="Entidades\Profesiones.cs" />
     <Compile Include="Entidades\Usuarios.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
     <EmbeddedResource Include="CapaPresentacion\frmCatalogos.resx">
       <DependentUpon>frmCatalogos.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,10 +189,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CapaPresentacion\frmGradosAcademicos.resx">
       <DependentUpon>frmGradosAcademicos.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="CapaPresentacion\frmDocente.resx">
+      <DependentUpon>frmDocente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\frmEvento.resx">
+      <DependentUpon>frmEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\frmInscripcion.resx">
+      <DependentUpon>frmInscripcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\frmListaParticipantes.resx">
+      <DependentUpon>frmListaParticipantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+>>>>>>> 1c991e5d116dbbb484a490b214152649d586ec41
     </EmbeddedResource>
     <EmbeddedResource Include="CapaPresentacion\frmParticipante.resx">
       <DependentUpon>frmParticipante.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="CapaPresentacion\frmProfesiones.resx">
       <DependentUpon>frmProfesiones.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,6 +218,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CapaPresentacion\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="CapaPresentacion\frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+>>>>>>> 1c991e5d116dbbb484a490b214152649d586ec41
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

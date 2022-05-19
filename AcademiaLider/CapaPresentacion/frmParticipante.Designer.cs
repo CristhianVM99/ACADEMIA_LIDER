@@ -53,13 +53,18 @@
             this.label11 = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.txtCriterioBusqueda = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
+<<<<<<< HEAD
             this.pbFoto = new System.Windows.Forms.PictureBox();
+=======
+            this.label12 = new System.Windows.Forms.Label();
+            this.lblMensaje = new System.Windows.Forms.Label();
+>>>>>>> 1c991e5d116dbbb484a490b214152649d586ec41
             ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
@@ -75,11 +80,16 @@
             // 
             // dgvListado
             // 
+            this.dgvListado.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvListado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvListado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListado.Location = new System.Drawing.Point(12, 237);
             this.dgvListado.Name = "dgvListado";
             this.dgvListado.ReadOnly = true;
-            this.dgvListado.Size = new System.Drawing.Size(838, 270);
+            this.dgvListado.Size = new System.Drawing.Size(960, 330);
             this.dgvListado.TabIndex = 1;
             this.dgvListado.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvListado_RowHeaderMouseDoubleClick);
             // 
@@ -172,6 +182,7 @@
             this.cboCiudad.Name = "cboCiudad";
             this.cboCiudad.Size = new System.Drawing.Size(211, 21);
             this.cboCiudad.TabIndex = 12;
+            this.cboCiudad.SelectedIndexChanged += new System.EventHandler(this.cboCiudad_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -244,10 +255,26 @@
             // 
             this.ofdFoto.FileName = "openFileDialog1";
             // 
+<<<<<<< HEAD
+=======
+            // pbFoto
+            // 
+            this.pbFoto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbFoto.Location = new System.Drawing.Point(834, 43);
+            this.pbFoto.Name = "pbFoto";
+            this.pbFoto.Size = new System.Drawing.Size(138, 124);
+            this.pbFoto.TabIndex = 21;
+            this.pbFoto.TabStop = false;
+            this.pbFoto.Click += new System.EventHandler(this.pbFoto_Click);
+            this.pbFoto.DoubleClick += new System.EventHandler(this.pbFoto_DoubleClick);
+            // 
+>>>>>>> 1c991e5d116dbbb484a490b214152649d586ec41
             // label11
             // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(794, 27);
+            this.label11.Location = new System.Drawing.Point(916, 27);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(56, 13);
             this.label11.TabIndex = 22;
@@ -265,34 +292,39 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.txtCriterioBusqueda);
-            this.groupBox1.Controls.Add(this.btnBuscar);
             this.groupBox1.Controls.Add(this.btnCancelar);
             this.groupBox1.Controls.Add(this.btnEliminar);
             this.groupBox1.Controls.Add(this.btnModificar);
             this.groupBox1.Controls.Add(this.btnNuevo);
             this.groupBox1.Location = new System.Drawing.Point(12, 173);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(838, 58);
+            this.groupBox1.Size = new System.Drawing.Size(960, 58);
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // label13
+            // 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(684, 24);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(58, 13);
+            this.label13.TabIndex = 6;
+            this.label13.Text = "Buscar por";
             // 
             // txtCriterioBusqueda
             // 
-            this.txtCriterioBusqueda.Location = new System.Drawing.Point(566, 21);
+            this.txtCriterioBusqueda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCriterioBusqueda.Location = new System.Drawing.Point(748, 21);
             this.txtCriterioBusqueda.Name = "txtCriterioBusqueda";
-            this.txtCriterioBusqueda.Size = new System.Drawing.Size(185, 20);
+            this.txtCriterioBusqueda.Size = new System.Drawing.Size(206, 20);
             this.txtCriterioBusqueda.TabIndex = 5;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Location = new System.Drawing.Point(757, 19);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscar.TabIndex = 4;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            this.txtCriterioBusqueda.TextChanged += new System.EventHandler(this.txtCriterioBusqueda_TextChanged);
             // 
             // btnCancelar
             // 
@@ -334,6 +366,7 @@
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
+<<<<<<< HEAD
             // pbFoto
             // 
             this.pbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -342,12 +375,39 @@
             this.pbFoto.Size = new System.Drawing.Size(138, 124);
             this.pbFoto.TabIndex = 21;
             this.pbFoto.TabStop = false;
+=======
+            // label12
+            // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(10, 582);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(50, 13);
+            this.label12.TabIndex = 25;
+            this.label12.Text = "Mensaje:";
+            // 
+            // lblMensaje
+            // 
+            this.lblMensaje.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblMensaje.AutoSize = true;
+            this.lblMensaje.Location = new System.Drawing.Point(66, 582);
+            this.lblMensaje.Name = "lblMensaje";
+            this.lblMensaje.Size = new System.Drawing.Size(0, 13);
+            this.lblMensaje.TabIndex = 26;
+>>>>>>> 1c991e5d116dbbb484a490b214152649d586ec41
             // 
             // frmParticipante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(891, 527);
+=======
+            this.ClientSize = new System.Drawing.Size(984, 611);
+            this.ControlBox = false;
+            this.Controls.Add(this.lblMensaje);
+            this.Controls.Add(this.label12);
+>>>>>>> 1c991e5d116dbbb484a490b214152649d586ec41
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.label11);
@@ -373,9 +433,14 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvListado);
             this.Controls.Add(this.cboGradoAcademico);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "frmParticipante";
+<<<<<<< HEAD
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Participante";
+=======
+            this.Text = "Participantes";
+>>>>>>> 1c991e5d116dbbb484a490b214152649d586ec41
             this.Load += new System.EventHandler(this.frmParticipante_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -419,6 +484,8 @@
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.TextBox txtCriterioBusqueda;
-        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblMensaje;
+        private System.Windows.Forms.Label label13;
     }
 }
